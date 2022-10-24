@@ -1,6 +1,10 @@
 const onShowPopUp = (text, isShow) => {
-  const popup = document.getElementById("popup");
-  popup.innerHTML = "";
+  const containerPopup = document.getElementById("popup");
+  containerPopup.innerHTML = "";
+
+  const popup = document.createElement("div");
+  popup.className = "popupBox";
+
   const buttons = document.createElement("div");
   const p = document.createElement("p");
   p.innerHTML = text;
@@ -17,8 +21,9 @@ const onShowPopUp = (text, isShow) => {
   buttons.appendChild(yesButton);
   buttons.appendChild(noButton);
   popup.appendChild(buttons);
+  containerPopup.appendChild(popup);
 
-  popup.style.display = isShow ? "flex" : "none";
+  containerPopup.style.display = isShow ? "flex" : "none";
 };
 const onSelect = (value) => {
   onShowPopUp();
