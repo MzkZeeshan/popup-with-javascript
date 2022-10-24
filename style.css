@@ -1,0 +1,16 @@
+*{
+    /* background-color: blue; */
+    margin: 0 auto;
+    padding: 0;
+
+}
+#popup
+{
+    left: 37.5vw;
+    top:35vh;
+    position: absolute;
+    background-color: blue;
+    height: 30vh;
+    width: 25vw;
+    margin: 0 auto;
+}
